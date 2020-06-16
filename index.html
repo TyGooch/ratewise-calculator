@@ -10,7 +10,7 @@
 
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
 
     <title>Mortage Calculator - RateWise</title>
@@ -629,7 +629,6 @@
       defer=""
     ></script>
 
-    <!-- <link rel="stylesheet" href="./styles.css" /> -->
     <link rel="stylesheet" href="./calculator.css" />
   </head>
 
@@ -736,111 +735,96 @@
                     >Annual Pre-Tax Income<span class="error" id="errorincome"></span
                   ></label>
                   <div class="currency-input-container empty">
-                    <input class="calculator-input " type="number" name="income" id="income" placeholder="0" required min="1" />
+                    <input
+                      class="calculator-input"
+                      type="number"
+                      name="income"
+                      id="income"
+                      placeholder="0"
+                      required
+                      min="1"
+                    />
                   </div>
 
                   <label class="label-text ml-0">
                     Other Income (bonus, commission, overtime)<span class="error" id="errorotherIncome"></span
                   ></label>
                   <div class="currency-input-container empty">
-                    <input class="calculator-input "" type="number" name="otherIncome" id="otherIncome"
-                    placeholder="0" min="0" />
+                    <input class="calculator-input "" type="number" name="otherIncome" id="otherIncome" placeholder="0"
+                    min="0" />
                   </div>
 
                   <label class="label-text ml-0">Deposit Amount<span class="error" id="errordeposit"></span></label>
                   <div class="currency-input-container empty">
-                    <input class="calculator-input mb-4"" type="number" name="deposit" id="deposit" placeholder="0" required min="1"/>
+                    <input class="calculator-input mb-4"" type="number" name="deposit" id="deposit" placeholder="0"
+                    required min="1"/>
                   </div>
 
                   <button type="button" class="app-btn" id="calculateButton">Calculate</button>
                 </div>
-                
+
                 <div class="card__face card__face--back results-container p-5">
-                  <div id="results">
-                    <p class="mb-0">You could borrow up to</p>
-                    <p id="borrow"></p>
-                    <p class="mb-2">
-                      and buy a house worth
-                      <b id="afford"></b>.<span class="purple">*</span>
-                    </p>
-                    <p class="disclaimer purple">
-                      *Most residential mortgages require a minimum of 10% deposit.
-                    </p>
-                    <p class="disclaimer">
-                      This amount is an estimate based on what a typical bank may offer. All lending is subject to
-                      application and approval by the lender. The actual amount you can borrow will depend on your
-                      situation and lender criteria. Most residential mortgages require a minimum of 10% deposit. RateWise
-                      is an introducer, not a lender.
-                    </p>
-  
-                    <button type="button" class="app-btn mb-4" id="getQuoteButton" >Get My Quote</button>
-                    <a id="backButton">Back</a>
-                  </div>
+                  <p class="mb-0">You could borrow up to</p>
+                  <p id="borrow"></p>
+                  <p class="mb-2">
+                    and buy a house worth
+                    <b id="afford"></b>.<span class="purple">*</span>
+                  </p>
+                  <p class="disclaimer purple">
+                    *Most residential mortgages require a minimum of 10% deposit.
+                  </p>
+                  <p class="disclaimer">
+                    This amount is an estimate based on what a typical bank may offer. All lending is subject to
+                    application and approval by the lender. The actual amount you can borrow will depend on your
+                    situation and lender criteria. Most residential mortgages require a minimum of 10% deposit. RateWise
+                    is an introducer, not a lender.
+                  </p>
+
+                  <button type="button" class="app-btn mb-4" id="getQuoteButton">Get My Quote</button>
+                  <a id="backButton">Back</a>
                 </div>
               </div>
             </div>
           </div>
-          <!-- <div class="row d-none" id="results">
-            <div class="col-12 col-sm-6 col-lg-6 col-xl-6 col-xxl-6 results-container p-5">
-              <p class="mb-0">You could borrow up to</p>
-              <p id="borrow"></p>
-              <p class="mb-2">
-                and buy a house worth
-                <b id="afford"></b>.<span class="purple">*</span>
-              </p>
-              <p class="disclaimer purple">
-                *Most residential mortgages require a minimum of 10% deposit.
-              </p>
-              <p class="disclaimer">
-                This amount is an estimate based on what a typical bank may offer. All lending is subject to application
-                and approval by the lender. The actual amount you can borrow will depend on your situation and lender
-                criteria. Most residential mortgages require a minimum of 10% deposit. RateWise is an introducer, not a
-                lender.
-              </p>
-
-              <button type="button" class="app-btn" id="getQuoteButton">Get My Quote</button>
-            </div>
-          </div>
-        </div> -->
+        </div>
       </section>
 
       <div class="container">
-        <section class="howWork" style="background:#fff;border-top:1px solid #ccc">
-        <h2> How does RateWise work?</h2>
-        <div class="row">
-        <div class="col-md-4">
-        <div class="icon-wrap">
-        <img src="https://ratewise.co.uk/wp-content/uploads/2020/05/share-ratewise-1.png">
-        
-        </div>
-        <h4 class="feature-title">Share</h4>
-        <p class="feature-body">
-        Tell us a little about yourself and the financing option you are looking for a car, personal, and mortgage.
-        </p>
-        </div>
-        <div class="col-md-4">
-        <div class="icon-wrap icon-form">
-        <img src="https://ratewise.co.uk/wp-content/uploads/2020/05/match-ratewise-1.png">
-        
-        </div>
-        <h4 class="feature-title">Match</h4>
-        <p class="feature-body">
-         We instantly find a solution tailored to your situation. One of our associates will be in touch with you.
-        </p>
-        </div>
-        <div class="col-md-4">
-        <div class="icon-wrap icon-form">
-        <img src="https://ratewise.co.uk/wp-content/uploads/2020/05/save-ratewise-1.png">
-        
-        </div>
-        <h4 class="feature-title">Save</h4>
-        <p class="feature-body">
-        Get the best rate on your secure financing option and save time with our quick and simple process.
-        </p>
-        </div>
-        </div>
+        <section class="howWork" style="background: #fff; border-top: 1px solid #ccc;">
+          <h2>How does RateWise work?</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icon-wrap">
+                <img src="https://ratewise.co.uk/wp-content/uploads/2020/05/share-ratewise-1.png" />
+              </div>
+              <h4 class="feature-title">Share</h4>
+              <p class="feature-body">
+                Tell us a little about yourself and the financing option you are looking for a car, personal, and
+                mortgage.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-wrap icon-form">
+                <img src="https://ratewise.co.uk/wp-content/uploads/2020/05/match-ratewise-1.png" />
+              </div>
+              <h4 class="feature-title">Match</h4>
+              <p class="feature-body">
+                We instantly find a solution tailored to your situation. One of our associates will be in touch with
+                you.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-wrap icon-form">
+                <img src="https://ratewise.co.uk/wp-content/uploads/2020/05/save-ratewise-1.png" />
+              </div>
+              <h4 class="feature-title">Save</h4>
+              <p class="feature-body">
+                Get the best rate on your secure financing option and save time with our quick and simple process.
+              </p>
+            </div>
+          </div>
         </section>
-        </div>
+      </div>
     </div>
 
     <script type="text/javascript" src="./calculator.js"></script>
