@@ -4,7 +4,7 @@ document.querySelector('.scene').style.height =
   document.querySelector('.calculator-container').offsetHeight + 'px'
 
 document.querySelector('#calculateButton').onclick = () => {
-  document.querySelector('#calculateButton').blur()
+  document.querySelector('body').click()
   let income = parseInt(document.querySelector('#income').value)
   let otherIncome = parseInt(document.querySelector('#otherIncome').value)
   otherIncome = otherIncome ? otherIncome : 0
