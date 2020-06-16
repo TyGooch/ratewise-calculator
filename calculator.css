@@ -1,6 +1,9 @@
 /* #calculatorTitle {
   font-size: 4rem !important;
 } */
+body {
+  font-family: roboto, sans-serif;
+}
 
 .heroBanner h1 {
   font-size: 3rem !important;
