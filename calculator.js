@@ -127,11 +127,11 @@ document.querySelectorAll('.calculator-container').forEach(el => {
   el.oninput = e => {
     const parent = e.target.parentElement.parentElement
     if (e.target.value) {
-      document.querySelector(`#error${e.target.id}`).textContent = ''
+      parent.querySelector(`#error${e.target.id}`).textContent = ''
       e.target.parentElement.classList.remove('empty')
     } else {
       if (e.target.required) {
-        document.querySelector(`#error${e.target.id}`).textContent =
+        parent.querySelector(`#error${e.target.id}`).textContent =
           'This field is required to be more than 0.'
       }
       e.target.parentElement.classList.add('empty')
