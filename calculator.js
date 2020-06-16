@@ -6,11 +6,12 @@ window.onload = () => {
 }
 
 document.querySelector('#calculateButton').onclick = () => {
-  document.querySelector('body').click()
   let income = parseInt(document.querySelector('#income').value)
   let otherIncome = parseInt(document.querySelector('#otherIncome').value)
   otherIncome = otherIncome ? otherIncome : 0
   let deposit = parseInt(document.querySelector('#deposit').value)
+
+  document.querySelector('#.flip-card').click()
 
   if (!income || !deposit) {
     if (!income) {
