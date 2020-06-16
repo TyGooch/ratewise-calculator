@@ -1,4 +1,5 @@
 const formatNumber = (x, n) => +x.toPrecision(n)
+
 document.querySelector('.scene').style.height =
   document.querySelector('.calculator-container').offsetHeight + 'px'
 
@@ -24,6 +25,10 @@ document.querySelector('#calculateButton').onclick = () => {
   document.querySelector('#errorincome').textContent = ''
   document.querySelector('#errordeposit').textContent = ''
 
+  document.querySelector('.scene').style.height =
+    document.querySelector('.results-container').offsetHeight + 'px'
+  document.querySelector('.flip-card').classList.toggle('is-flipped')
+
   let borrow = 4.52 * (income + otherIncome)
   borrow = Math.floor(borrow * 1) / 1
   borrow = formatNumber(borrow, 3)
@@ -37,10 +42,10 @@ document.querySelector('#calculateButton').onclick = () => {
 
   document.querySelector('#borrow').textContent = '£' + borrow
   document.querySelector('#afford').textContent = '£' + afford
+}
 
-  document.querySelector('.scene').style.height =
-    document.querySelector('.results-container').offsetHeight + 'px'
-  document.querySelector('.flip-card').classList.toggle('is-flipped')
+document.querySelector('#getQuoteButton').onclick = () => {
+  window.location.href = 'https://ratewise.co.uk/mortgage/mortgage-type/'
 }
 
 document.querySelector('#backButton').onclick = () => {

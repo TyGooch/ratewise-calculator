@@ -189,11 +189,9 @@ body {
 }
 
 .card__face--back {
-  /* border: 1px solid #aaaaaa; */
-  /* background: #fff; */
-  transform: rotateY(180deg);
-}
+  /* border-top: 1px solid #ccc; */
 
-#results {
+  /* border: 1px solid #aaaaaa; */
   background: #fff;
+  transform: rotateY(180deg);
 }
