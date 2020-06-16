@@ -9,12 +9,12 @@ document.querySelector('#calculateButton').onclick = () => {
   if (!income || !deposit) {
     if (!income) {
       document.querySelector('#errorIncome').textContent =
-        'This field is required'
+        'This field is required to be more than 0.'
     }
 
     if (!deposit) {
       document.querySelector('#errorDeposit').textContent =
-        'This field is required'
+        'This field is required to be more than 0.'
     }
     return
   }
