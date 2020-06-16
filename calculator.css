@@ -73,7 +73,7 @@ body {
   border: 2px solid #fff;
   background: 0 0;
   opacity: 1;
-  transition: 0.1s 0.3s;
+  transition: all 0.1s 0.3s;
 }
 
 #calculateButton:hover {
