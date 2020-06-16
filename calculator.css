@@ -131,7 +131,7 @@ body {
   position: relative;
   left: 0.75rem;
   top: 14.5px;
-  transition: opacity 1s;
+  /* transition: opacity 1s; */
   font-size: 1.5rem;
   color: #000;
 }
