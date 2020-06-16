@@ -13,6 +13,9 @@
   .dollars {
     top: 0.5rem !important;
   }
+  .custom-box {
+    margin-bottom: 0;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1070px) {
   .heroBanner h1 {
@@ -21,11 +24,25 @@
 }
 
 .calculator-container {
+  background-color: #5c39c6;
   /* align-items: flex-start !important;
   justify-content: flex-start !important; */
-  border: 1px solid #886be7;
+  /* border: 1px solid #886be7; */
   border-radius: 14px;
   /* box-shadow: 0px 0px 50px #886be7; */
+}
+
+.calculator-container label {
+  color: #fff !important;
+}
+
+.calculator-container .error {
+  color: #f96363 !important;
+}
+
+#calculateButton {
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 #calculateButton,
@@ -46,12 +63,13 @@
 
 .dollars {
   left: 12px !important;
-  top: 13px;
+  top: 13.5px;
 }
 
 .calculator-input {
   padding: 0px !important;
   padding-left: 30px !important;
+  border: 0 !important;
 }
 
 .disclaimer {
