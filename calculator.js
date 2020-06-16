@@ -6,6 +6,22 @@ document.querySelector('#calculateButton').onclick = () => {
   otherIncome = otherIncome ? otherIncome : 0
   let deposit = parseInt(document.querySelector('#deposit').value)
 
+  if (!income || !deposit) {
+    if (!income) {
+      document.querySelector('#errorIncome').textContent =
+        'This field is required'
+    }
+
+    if (!deposit) {
+      document.querySelector('#errorDeposit').textContent =
+        'This field is required'
+    }
+    return
+  }
+
+  document.querySelector('#errorIncome').textContent = ''
+  document.querySelector('#errorDeposit').textContent = ''
+
   let borrow = 4.52 * (income + otherIncome)
   borrow = Math.floor(borrow * 1) / 1
   borrow = formatNumber(borrow, 3)
