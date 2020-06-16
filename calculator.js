@@ -12,6 +12,7 @@ document.querySelector('#calculateButton').onclick = () => {
   let deposit = parseInt(document.querySelector('#deposit').value)
 
   document.querySelector('.flip-card').click()
+  document.activeElement.blur()
 
   if (!income || !deposit) {
     if (!income) {
