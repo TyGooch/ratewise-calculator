@@ -72,6 +72,8 @@ body {
 #calculateButton {
   border: 2px solid #fff;
   background: 0 0;
+  opacity: 1;
+  transition: 0.1s 0.3s;
 }
 
 #calculateButton:hover {
@@ -171,6 +173,10 @@ body {
 .flip-card.is-flipped {
   /* transform: rotateY(180deg); */
   transform: translateX(-100%) rotateY(-180deg);
+}
+
+.flip-card.is-flipped #calculateButton {
+  opacity: 0;
 }
 
 .flip-card.is-flipped .currency-input-container::before {
