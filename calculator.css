@@ -6,15 +6,15 @@ body {
 }
 
 .heroBanner h1 {
-  font-size: 3rem !important;
+  font-size: 3.5rem !important;
 }
 
 @media only screen and (max-width: 767px) {
   .heroBanner h1 {
     font-size: 2.2rem !important;
   }
-  .dollars {
-    top: 0.5rem !important;
+  .currency-input-container::before {
+    top: 11px !important;
   }
   .custom-box {
     margin-bottom: 0;
@@ -28,29 +28,45 @@ body {
 
 .calculator-container {
   background-color: #5c39c6;
-  /* align-items: flex-start !important;
-  justify-content: flex-start !important; */
-  /* border: 1px solid #886be7; */
   border-radius: 14px;
-  /* box-shadow: 0px 0px 50px #886be7; */
 }
 
 .calculator-container label {
+  /* display: flex; */
   color: #fff !important;
 }
 
 .calculator-container .error {
   color: #f96363 !important;
+  margin-bottom: 0 !important;
+  font-size: 14px;
+  padding-left: 0;
 }
 
 #calculateButton {
-  color: #fff;
   border: 2px solid #fff;
+  background: 0 0;
+}
+
+#calculateButton:hover {
+  background: #442997 !important;
+  /* transform: none !important; */
 }
 
 #calculateButton,
 #getQuoteButton {
   width: 100% !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+#backButton {
+  cursor: pointer;
+  color: #4a4f53;
+}
+#backButton:hover {
+  text-decoration: underline;
 }
 
 #borrow {
@@ -62,6 +78,7 @@ body {
 
 #afford {
   font-weight: 700;
+  color: #000;
 }
 
 .dollars {
@@ -73,6 +90,28 @@ body {
   padding: 0px !important;
   padding-left: 30px !important;
   border: 0 !important;
+  background: #fff;
+}
+
+.currency-input-container {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.currency-input-container::before {
+  content: "£";
+  width: 0;
+  height: 0;
+  position: relative;
+  left: 0.75rem;
+  top: 14.5px;
+  transition: opacity 1s;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.currency-input-container.empty::before {
+  color: #a9a9a9;
 }
 
 .disclaimer {
@@ -84,5 +123,46 @@ body {
 }
 
 .purple {
-  color: #886be7;
+  color: #5c39c6;
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+  perspective: 800px;
+}
+
+.flip-card {
+  width: 100%;
+  height: 493px;
+  position: relative;
+  transition: all 1s;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+}
+
+.flip-card.is-flipped {
+  /* transform: rotateY(180deg); */
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.flip-card.is-flipped .currency-input-container::before {
+  opacity: 0;
+}
+
+.card__face {
+  position: absolute;
+  height: fit-content;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: #5c39c6;
+}
+
+.card__face--back {
+  /* border: 1px solid #aaaaaa; */
+  background: #fff;
+  transform: rotateY(180deg);
 }

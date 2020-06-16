@@ -8,19 +8,19 @@ document.querySelector('#calculateButton').onclick = () => {
 
   if (!income || !deposit) {
     if (!income) {
-      document.querySelector('#errorIncome').textContent =
+      document.querySelector('#errorincome').textContent =
         'This field is required to be more than 0.'
     }
 
     if (!deposit) {
-      document.querySelector('#errorDeposit').textContent =
+      document.querySelector('#errordeposit').textContent =
         'This field is required to be more than 0.'
     }
     return
   }
 
-  document.querySelector('#errorIncome').textContent = ''
-  document.querySelector('#errorDeposit').textContent = ''
+  document.querySelector('#errorincome').textContent = ''
+  document.querySelector('#errordeposit').textContent = ''
 
   let borrow = 4.52 * (income + otherIncome)
   borrow = Math.floor(borrow * 1) / 1
@@ -36,8 +36,31 @@ document.querySelector('#calculateButton').onclick = () => {
   document.querySelector('#borrow').textContent = '£' + borrow
   document.querySelector('#afford').textContent = '£' + afford
 
-  document.querySelector('#results').classList.remove('d-none')
-  document
-    .querySelector('#results')
-    .scrollIntoView({ behavior: 'smooth', block: 'end' })
+  document.querySelector('.flip-card').classList.toggle('is-flipped')
 }
+
+document.querySelector('#backButton').onclick = () => {
+  document.querySelector('.flip-card').classList.toggle('is-flipped')
+}
+
+document.querySelector('.calculator-container').oninput = e => {
+  if (e.target.value) {
+    document.querySelector(`#error${e.target.id}`).textContent = ''
+    e.target.parentElement.classList.remove('empty')
+  } else {
+    if (e.target.required) {
+      document.querySelector(`#error${e.target.id}`).textContent =
+        'This field is required to be more than 0.'
+    }
+    e.target.parentElement.classList.add('empty')
+  }
+}
+
+// document.querySelector('.calculator-container').onblur = e => {
+//   if (e.target.value) {
+//     // document.querySelector(`error${e.target.id}`).textContent =
+//     //   'This field is required to be more than 0.'
+//   } else {
+//     e.target.parentElement.classList.add('empty')
+//   }
+// }
