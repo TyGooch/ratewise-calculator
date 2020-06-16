@@ -10,6 +10,9 @@
   .heroBanner h1 {
     font-size: 2.2rem !important;
   }
+  .dollars {
+    top: 0.5rem !important;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1070px) {
   .heroBanner h1 {
@@ -18,14 +21,15 @@
 }
 
 .calculator-container {
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
+  /* align-items: flex-start !important;
+  justify-content: flex-start !important; */
   border: 1px solid #886be7;
   border-radius: 14px;
   /* box-shadow: 0px 0px 50px #886be7; */
 }
 
-#calculateButton {
+#calculateButton,
+#getQuoteButton {
   width: 100% !important;
 }
 
