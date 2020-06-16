@@ -125,6 +125,7 @@ document.querySelectorAll('#backButton').forEach(el => {
 
 document.querySelectorAll('.calculator-container').forEach(el => {
   el.oninput = e => {
+    const parent = e.target.parentElement.parentElement
     if (e.target.value) {
       document.querySelector(`#error${e.target.id}`).textContent = ''
       e.target.parentElement.classList.remove('empty')
