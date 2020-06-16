@@ -9,6 +9,10 @@ body {
   font-size: 3.5rem !important;
 }
 
+.bg-purple {
+  background: #5c39c6;
+}
+
 @media only screen and (max-width: 540px) {
   .heroBanner h1 {
     font-size: 1.75rem !important;
@@ -54,6 +58,7 @@ body {
 
 .calculator-container {
   background-color: #5c39c6;
+  /* background: linear-gradient(180deg, #7355ce 0%, #5c39c6 38%, #4f30aa 100%) !important; */
   border-radius: 14px;
 }
 
@@ -177,6 +182,7 @@ body {
 
 .flip-card.is-flipped #calculateButton {
   opacity: 0;
+  visibility: hidden;
 }
 
 .flip-card.is-flipped .currency-input-container::before {

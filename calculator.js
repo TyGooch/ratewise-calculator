@@ -1,9 +1,9 @@
 const formatNumber = (x, n) => +x.toPrecision(n)
 
-window.onload = () => {
-  document.querySelector('.scene').style.height =
-    document.querySelector('.calculator-container').offsetHeight + 'px'
-}
+// window.onload = () => {
+document.querySelector('.scene').style.height =
+  document.querySelector('.calculator-container').offsetHeight + 'px'
+// }
 
 document.querySelector('#calculateButton').onclick = () => {
   let income = parseInt(document.querySelector('#income').value)
@@ -11,7 +11,7 @@ document.querySelector('#calculateButton').onclick = () => {
   otherIncome = otherIncome ? otherIncome : 0
   let deposit = parseInt(document.querySelector('#deposit').value)
 
-  document.querySelector('.flip-card').click()
+  // document.querySelector('.flip-card').click()
   document.activeElement.blur()
 
   if (!income || !deposit) {
