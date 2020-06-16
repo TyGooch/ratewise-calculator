@@ -9,7 +9,33 @@ body {
   font-size: 3.5rem !important;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 540px) {
+  .heroBanner h1 {
+    font-size: 1.75rem !important;
+  }
+  .heroBanner {
+    padding-bottom: 0 !important;
+  }
+
+  .scene {
+    width: 100vw !important;
+    padding: 0 !important;
+  }
+
+  .calculator-container {
+    border-radius: 0 !important;
+  }
+
+  .currency-input-container::before {
+    top: 9px !important;
+  }
+
+  .results-container {
+    background: transparent !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 768px) {
   .heroBanner h1 {
     font-size: 2.2rem !important;
   }
@@ -20,7 +46,7 @@ body {
     margin-bottom: 0;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1070px) {
+@media only screen and (min-width: 769px) and (max-width: 1070px) {
   .heroBanner h1 {
     font-size: 3rem !important;
   }
@@ -128,8 +154,9 @@ body {
 
 .scene {
   width: 100%;
-  height: 100%;
+  height: 493px;
   perspective: 800px;
+  transition: all 1s;
 }
 
 .flip-card {
@@ -163,6 +190,10 @@ body {
 
 .card__face--back {
   /* border: 1px solid #aaaaaa; */
-  background: #fff;
+  /* background: #fff; */
   transform: rotateY(180deg);
+}
+
+#results {
+  background: #fff;
 }

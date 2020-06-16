@@ -1,4 +1,6 @@
 const formatNumber = (x, n) => +x.toPrecision(n)
+document.querySelector('.scene').style.height =
+  document.querySelector('.calculator-container').offsetHeight + 'px'
 
 document.querySelector('#calculateButton').onclick = () => {
   let income = parseInt(document.querySelector('#income').value)
@@ -36,10 +38,14 @@ document.querySelector('#calculateButton').onclick = () => {
   document.querySelector('#borrow').textContent = '£' + borrow
   document.querySelector('#afford').textContent = '£' + afford
 
+  document.querySelector('.scene').style.height =
+    document.querySelector('.results-container').offsetHeight + 'px'
   document.querySelector('.flip-card').classList.toggle('is-flipped')
 }
 
 document.querySelector('#backButton').onclick = () => {
+  document.querySelector('.scene').style.height =
+    document.querySelector('.calculator-container').offsetHeight + 'px'
   document.querySelector('.flip-card').classList.toggle('is-flipped')
 }
 
