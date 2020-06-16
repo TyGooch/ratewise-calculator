@@ -38,6 +38,6 @@ document.querySelector('#calculateButton').onclick = () => {
 
   document.querySelector('#results').classList.remove('d-none')
   document
-    .querySelector('#getQuoteButton')
-    .scrollIntoView({ behavior: 'smooth' })
+    .querySelector('#results')
+    .scrollIntoView({ behavior: 'smooth', block: 'end' })
 }
