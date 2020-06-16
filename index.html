@@ -724,13 +724,249 @@
 
     <div id="content" class="site-content">
       <section class="heroBanner">
-        <div class="container">
+        <div class="container" id="personal">
+          <h1 id="calculatorTitle">Quick & Simple Personal Loan Calculator</h1>
+          <p class="subheader">Find out how much a personal loan could cost.</p>
+          <div class="row justify-content-center mt-5">
+            <div class="col-12 col-sm-11 col-md-8 col-lg-6 col-xl-6 col-xxl-6 scene">
+              <div class="flip-card">
+                <div class="card__face card__face--front calculator-container p-5" data-calculation="personal">
+                  <label class="label-text ml-0"
+                    >Personal Loan Amount<span class="error" id="erroramount"></span
+                  ></label>
+                  <div class="currency-input-container empty">
+                    <input
+                      class="calculator-input"
+                      type="number"
+                      name="amount"
+                      id="amount"
+                      placeholder="0"
+                      required
+                      min="1"
+                    />
+                  </div>
+
+                  <label class="label-text ml-0"> Repayment Term<span class="error" id="errorterm"></span></label>
+                  <select class="calculator-select mb-4" name="term" id="term" placeholder="0" min="0">
+                    <option value="1">1 Year</option>
+                    <option value="2">2 Years</option>
+                    <option value="3">3 Years</option>
+                    <option value="4">4 Years</option>
+                    <option value="5">5 Years</option>
+                  </select>
+
+                  <label class="label-text ml-0">Credit Rating<span class="error" id="errorcredit"></span></label>
+                  <select class="calculator-select mb-4" name="interest" id="interest">
+                    <option value="6.90">Excellent</option>
+                    <option value="8.90">Good</option>
+                    <option value="11.90">Fair</option>
+                    <option value="14.90">Poor</option>
+                    <option value="17.90">Bad</option>
+                  </select>
+
+                  <button type="button" class="app-btn mt-4" id="calculateButton">Calculate</button>
+                </div>
+
+                <div class="card__face card__face--back results-container p-5">
+                  <p class="mb-0 result-subheader">
+                    Business financing of
+                    <b class="purple" id="totalAmount"></b> could cost
+                  </p>
+                  <p class="results-main purple result-subheader mb-0" id="monthlyPayment"></p>
+                  <p class="result-subheader">Per month</p>
+                  <p class="disclaimer">
+                    This amount is an estimate based on what a typical bank may offer. All lending is subject to
+                    application and approval by the lender. The actual amount you can borrow will depend on your
+                    situation and lender criteria. RateWise is an introducer, not a lender.
+                  </p>
+                  <p class="disclaimer">
+                    This is a representative example based on borrowing <span id="disclaimerAmount"></span> at
+                    <span id="disclaimerInterest"></span>% of interest over rate
+                    <span id="disclaimerTerm"></span> years.
+                  </p>
+
+                  <button
+                    type="button"
+                    class="app-btn mb-4"
+                    id="getQuoteButton"
+                    data-url="https://ratewise.co.uk/personal-loan/loan-purpose/"
+                  >
+                    Apply Now
+                  </button>
+                  <a id="backButton">Back</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="heroBanner">
+        <div class="container" id="car">
+          <h1 id="calculatorTitle">Quick & Simple Car Loan Calculator</h1>
+          <p class="subheader">Find out how much a car loan could cost.</p>
+          <div class="row justify-content-center mt-5">
+            <div class="col-12 col-sm-11 col-md-8 col-lg-6 col-xl-6 col-xxl-6 scene">
+              <div class="flip-card">
+                <div class="card__face card__face--front calculator-container p-5" data-calculation="car">
+                  <label class="label-text ml-0">Car Loan Amount<span class="error" id="erroramount"></span></label>
+                  <div class="currency-input-container empty">
+                    <input
+                      class="calculator-input"
+                      type="number"
+                      name="amount"
+                      id="amount"
+                      placeholder="0"
+                      required
+                      min="1"
+                    />
+                  </div>
+
+                  <label class="label-text ml-0"> Repayment Term<span class="error" id="errorterm"></span></label>
+                  <select class="calculator-select mb-4" name="term" id="term" placeholder="0" min="0">
+                    <option value="1">1 Year</option>
+                    <option value="2">2 Years</option>
+                    <option value="3">3 Years</option>
+                    <option value="4">4 Years</option>
+                    <option value="5">5 Years</option>
+                  </select>
+
+                  <label class="label-text ml-0">Credit Rating<span class="error" id="errorcredit"></span></label>
+                  <select class="calculator-select mb-4" name="interest" id="interest">
+                    <option value="6.90">Excellent</option>
+                    <option value="8.90">Good</option>
+                    <option value="11.90">Fair</option>
+                    <option value="14.90">Poor</option>
+                    <option value="17.90">Bad</option>
+                  </select>
+
+                  <button type="button" class="app-btn mt-4" id="calculateButton">Calculate</button>
+                </div>
+
+                <div class="card__face card__face--back results-container p-5">
+                  <p class="mb-0 result-subheader">
+                    Business financing of
+                    <b class="purple" id="totalAmount"></b> could cost
+                  </p>
+                  <p class="results-main purple result-subheader mb-0" id="monthlyPayment"></p>
+                  <p class="result-subheader">Per month</p>
+                  <p class="disclaimer">
+                    This amount is an estimate based on what a typical bank may offer. All lending is subject to
+                    application and approval by the lender. The actual amount you can borrow will depend on your
+                    situation and lender criteria. RateWise is an introducer, not a lender.
+                  </p>
+                  <p class="disclaimer">
+                    This is a representative example based on borrowing <span id="disclaimerAmount"></span> at
+                    <span id="disclaimerInterest"></span>% of interest over rate
+                    <span id="disclaimerTerm"></span> years.
+                  </p>
+
+                  <button
+                    type="button"
+                    class="app-btn mb-4"
+                    id="getQuoteButton"
+                    data-url="https://ratewise.co.uk/business-loan/business-purpose/"
+                  >
+                    Apply Now
+                  </button>
+                  <a id="backButton">Back</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="heroBanner">
+        <div class="container" id="business">
+          <h1 id="calculatorTitle">Quick & Simple Business Loan Calculator</h1>
+          <p class="subheader">Find out how much a business loan could cost.</p>
+          <div class="row justify-content-center mt-5">
+            <div class="col-12 col-sm-11 col-md-8 col-lg-6 col-xl-6 col-xxl-6 scene">
+              <div class="flip-card">
+                <div class="card__face card__face--front calculator-container p-5" data-calculation="business">
+                  <label class="label-text ml-0"
+                    >Business Loan Amount<span class="error" id="erroramount"></span
+                  ></label>
+                  <div class="currency-input-container empty">
+                    <input
+                      class="calculator-input"
+                      type="number"
+                      name="amount"
+                      id="amount"
+                      placeholder="0"
+                      required
+                      min="1"
+                    />
+                  </div>
+
+                  <label class="label-text ml-0"> Repayment Term<span class="error" id="errorterm"></span></label>
+                  <select class="calculator-select mb-4" name="term" id="term" placeholder="0" min="0">
+                    <option value="1">1 Year</option>
+                    <option value="2">2 Years</option>
+                    <option value="3">3 Years</option>
+                    <option value="4">4 Years</option>
+                    <option value="5">5 Years</option>
+                    <option value="6">6 Years</option>
+                  </select>
+
+                  <label class="label-text ml-0">Interest Rate<span class="error" id="errorinterest"></span></label>
+                  <input
+                    class="calculator-input mb-4"
+                    type="number"
+                    name="interest"
+                    id="interest"
+                    placeholder="0"
+                    required
+                    min="0"
+                    max="100"
+                  />
+
+                  <button type="button" class="app-btn mt-4" id="calculateButton">Calculate</button>
+                </div>
+
+                <div class="card__face card__face--back results-container p-5">
+                  <p class="mb-0 result-subheader">
+                    Business financing of
+                    <b class="purple" id="totalAmount"></b> could cost
+                  </p>
+                  <p class="results-main purple result-subheader mb-0" id="monthlyPayment"></p>
+                  <p class="result-subheader">Per month</p>
+                  <p class="disclaimer">
+                    This amount is an estimate based on what a typical bank may offer. All lending is subject to
+                    application and approval by the lender. The actual amount you can borrow will depend on your
+                    situation and lender criteria. RateWise is an introducer, not a lender.
+                  </p>
+                  <p class="disclaimer">
+                    This is a representative example based on borrowing <span id="disclaimerAmount"></span> at
+                    <span id="disclaimerInterest"></span>% of interest over rate
+                    <span id="disclaimerTerm"></span> years.
+                  </p>
+
+                  <button
+                    type="button"
+                    class="app-btn mb-4"
+                    id="getQuoteButton"
+                    data-url="https://ratewise.co.uk/business-loan/business-purpose/"
+                  >
+                    Apply Now
+                  </button>
+                  <a id="backButton">Back</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="heroBanner">
+        <div class="container" id="mortgage">
           <h1 id="calculatorTitle">Quick & Simple Mortgage Calculator</h1>
           <p class="subheader">Find out how much you could borrow.</p>
           <div class="row justify-content-center mt-5">
             <div class="col-12 col-sm-11 col-md-8 col-lg-6 col-xl-6 col-xxl-6 scene">
               <div class="flip-card">
-                <div class="card__face card__face--front calculator-container p-5">
+                <div class="card__face card__face--front calculator-container p-5" data-calculation="mortgage">
                   <label class="label-text ml-0"
                     >Annual Pre-Tax Income<span class="error" id="errorincome"></span
                   ></label>
@@ -756,17 +992,17 @@
 
                   <label class="label-text ml-0">Deposit Amount<span class="error" id="errordeposit"></span></label>
                   <div class="currency-input-container empty">
-                    <input class="calculator-input mb-4"" type="number" name="deposit" id="deposit" placeholder="0"
-                    required min="1"/>
+                    <input class="calculator-input"" type="number" name="deposit" id="deposit" placeholder="0" required
+                    min="1"/>
                   </div>
 
-                  <button type="button" class="app-btn" id="calculateButton">Calculate</button>
+                  <button type="button" class="app-btn mt-4" id="calculateButton">Calculate</button>
                 </div>
 
                 <div class="card__face card__face--back results-container p-5">
-                  <p class="mb-0">You could borrow up to</p>
-                  <p id="borrow"></p>
-                  <p class="mb-2">
+                  <p class="mb-0 result-subheader">You could borrow up to</p>
+                  <p class="results-main purple result-subheader mb-0" id="borrow"></p>
+                  <p class="mb-2 result-subheader">
                     and buy a house worth
                     <b id="afford"></b>.<span class="purple">*</span>
                   </p>
@@ -780,7 +1016,14 @@
                     is an introducer, not a lender.
                   </p>
 
-                  <button type="button" class="app-btn mb-4" id="getQuoteButton">Get My Quote</button>
+                  <button
+                    type="button"
+                    class="app-btn mb-4"
+                    id="getQuoteButton"
+                    data-url="https://ratewise.co.uk/mortgage/mortgage-type/"
+                  >
+                    Get My Quote
+                  </button>
                   <a id="backButton">Back</a>
                 </div>
               </div>

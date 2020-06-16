@@ -34,6 +34,11 @@ body {
   .heroBanner h1 {
     font-size: 1.75rem !important;
   }
+
+  .subheader {
+    font-size: 18px;
+  }
+
   .heroBanner {
     padding-bottom: 0 !important;
   }
@@ -82,6 +87,11 @@ body {
   .heroBanner h1 {
     font-size: 2.2rem !important;
   }
+
+  .subheader {
+    font-size: 18px;
+  }
+
   .currency-input-container::before {
     top: 11px !important;
   }
@@ -141,11 +151,11 @@ body {
   text-decoration: underline;
 }
 
-#borrow {
+.results-main {
   color: #886be7;
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 0;
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0 !important;
 }
 
 #afford {
@@ -159,8 +169,10 @@ body {
 }
 
 .calculator-input {
-  padding: 0px !important;
-  padding-left: 30px !important;
+  /* padding: 0px !important; */
+  padding: 1rem !important;
+  padding-left: 0.75rem;
+  /* padding-left: 30px !important; */
   border: 0 !important;
   background: #fff;
 }
@@ -170,12 +182,16 @@ body {
   margin-bottom: 1rem;
 }
 
+.currency-input-container .calculator-input {
+  padding-left: 2.25rem !important;
+}
+
 .currency-input-container::before {
   content: "£";
   width: 0;
   height: 0;
   position: relative;
-  left: 0.75rem;
+  left: 1rem;
   top: 14.5px;
   /* transition: opacity 1s; */
   font-size: 1.5rem;
@@ -184,6 +200,14 @@ body {
 
 .currency-input-container.empty::before {
   color: #a9a9a9;
+}
+
+.calculator-select {
+  width: 100%;
+  border-radius: 3px;
+  font-size: 25px;
+  padding: 1rem;
+  outline: none !important;
 }
 
 .disclaimer {
@@ -195,7 +219,7 @@ body {
 }
 
 .purple {
-  color: #5c39c6;
+  color: #5c39c6 !important;
 }
 
 .scene {
@@ -250,4 +274,15 @@ body {
   /* border: 1px solid #aaaaaa; */
   background: #fff;
   transform: rotateY(180deg);
+}
+
+.result-subheader {
+  font-size: 1.25rem;
+  /* line-height: 40px; */
+  font-weight: 300;
+  color: #9d9a9a;
+
+  /* margin: 0 auto; */
+  text-align: center;
+  letter-spacing: 0.3px;
 }
