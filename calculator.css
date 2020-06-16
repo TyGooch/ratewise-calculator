@@ -5,8 +5,25 @@ body {
   font-family: roboto, sans-serif;
 }
 
+.subheader {
+  font-size: 1.8rem;
+  line-height: 40px;
+  font-weight: 300;
+  color: #9d9a9a;
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
 .heroBanner h1 {
   font-size: 3.5rem !important;
+  margin-top: 4rem;
+  margin-bottom: 25px;
+  /* color: #2c3e50; */
+  font-weight: 600;
+  text-align: center;
+  /* font-size: 47px; */
 }
 
 .bg-purple {
