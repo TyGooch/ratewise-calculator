@@ -1,7 +1,9 @@
 const formatNumber = (x, n) => +x.toPrecision(n)
 
-document.querySelector('.scene').style.height =
-  document.querySelector('.calculator-container').offsetHeight + 'px'
+window.onload = () => {
+  document.querySelector('.scene').style.height =
+    document.querySelector('.calculator-container').offsetHeight + 'px'
+}
 
 document.querySelector('#calculateButton').onclick = () => {
   document.querySelector('body').click()
