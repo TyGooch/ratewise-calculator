@@ -7,6 +7,32 @@ const calculatePayment = (amount, interest, term) => {
   ).toFixed(2)
 }
 
+const setInputFilter = (textbox, inputFilter) => {
+  ;[
+    'input',
+    'keydown',
+    'keyup',
+    'mousedown',
+    'mouseup',
+    'select',
+    'contextmenu',
+    'drop'
+  ].forEach(function (event) {
+    textbox.addEventListener(event, function () {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value
+        this.oldSelectionStart = this.selectionStart
+        this.oldSelectionEnd = this.selectionEnd
+      } else if (this.hasOwnProperty('oldValue')) {
+        this.value = this.oldValue
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd)
+      } else {
+        this.value = ''
+      }
+    })
+  })
+}
+
 // window.onload = () => {
 document.querySelectorAll('.scene').forEach(el => {
   el.style.height =
@@ -104,6 +130,7 @@ document.querySelectorAll('#calculateButton').forEach(el => {
     container.querySelector('.flip-card').classList.toggle('is-flipped')
     container.querySelector('.scene').style.height =
       container.querySelector('.results-container').offsetHeight + 'px'
+    document.querySelector('.subheader').scrollIntoViewIfNeeded()
   }
 })
 
@@ -121,6 +148,12 @@ document.querySelectorAll('#backButton').forEach(el => {
       parent.querySelector('.calculator-container').offsetHeight + 'px'
     parent.querySelector('.flip-card').classList.toggle('is-flipped')
   }
+})
+
+document.querySelectorAll('input').forEach(el => {
+  setInputFilter(el, value => {
+    return /^\d*\.?\d*$/.test(value) // Allow digits and '.' only, using a RegExp
+  })
 })
 
 document.querySelectorAll('.calculator-container').forEach(el => {

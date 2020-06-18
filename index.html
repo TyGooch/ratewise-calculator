@@ -963,7 +963,7 @@
           <h1 id="calculatorTitle">Quick & Simple Mortgage Calculator</h1>
           <p class="subheader">Find out how much you could borrow.</p>
           <div class="row justify-content-center mt-5">
-            <div class="col-12 col-sm-11 col-md-8 col-lg-6 col-xl-6 col-xxl-6 scene">
+            <div class="col-11 col-sm-11 col-md-8 col-lg-6 col-xl-6 col-xxl-6 scene">
               <div class="flip-card">
                 <div class="card__face card__face--front calculator-container p-5" data-calculation="mortgage">
                   <label class="label-text ml-0"
@@ -998,9 +998,9 @@
                   <button type="button" class="app-btn mt-4" id="calculateButton">Calculate</button>
                 </div>
 
-                <div class="card__face card__face--back results-container p-5">
+                <div class="card__face card__face--back results-container">
                   <p class="mb-0 result-subheader">You could borrow up to</p>
-                  <p class="results-main purple result-subheader mb-0" id="borrow"></p>
+                  <p class="purple mb-0 results-main" id="borrow"></p>
                   <p class="mb-2 result-subheader">
                     and buy a house worth
                     <b id="afford"></b>.<span class="purple">*</span>
@@ -1023,7 +1023,22 @@
                   >
                     Get My Quote
                   </button>
-                  <a id="backButton">Back</a>
+                  <a id="backButton"
+                    ><svg
+                      class="bi bi-chevron-right"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="font-size: 11px;"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                      ></path></svg
+                    >Back</a
+                  >
                 </div>
               </div>
             </div>
